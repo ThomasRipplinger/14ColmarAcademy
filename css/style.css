@@ -4,12 +4,12 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 900;
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -64,44 +64,36 @@ header ul li {
     line-height: 150%;
 }
 
-.column.leftside {
-    width: 60%;
-    margin-left: 24px;
-    margin-right: 24px;
+.banner .button {
+    width: 19rem;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    color: white;
+    background-color: #393333;
 }
 
 .gray {
     background-color: lightgray;
 }
 
-.imagecontainer {
-    background-size: cover;
+.column.leftside {
+    width: 60%;
+    min-height: 400px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
-.banner .imagecontainer {
-    background-image: url("../assets/images/banner.jpg");
-    min-height: 600px;
+.column.rightside {
+    width: 40%;
+}
+
+.column.leftside img {
+    width: 100%;
 }
 
 .information .rightside {
     justify-content: space-between;
-}
-
-.information .imagecontainer {
-    background-image: url("../assets/images/information-main.jpg");
-    min-height: 500px;
-}
-
-.textmargin {
-    margin: 1rem 0;
-}
-
-.banner .button {
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 8px 0;
-    color: white;
-    background-color: #393333;
 }
 
 .information h1 {
@@ -124,6 +116,10 @@ header ul li {
 .infodetail img {
     width: 35%;
     margin: 16px;
+}
+
+.infodetail.topmost img {
+    margin-top: 0;
 }
 
 .infodetail p {
