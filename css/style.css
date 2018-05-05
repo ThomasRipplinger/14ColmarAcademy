@@ -125,3 +125,51 @@ header ul li {
 .infodetail p {
     margin-top: 8px;
 }
+
+.learning h1, .thesis h1 {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.h-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 56px 32px 56px;
+}
+
+.learningdetail {
+    width: 33%;
+    background-color: white;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.learningdetail img {
+    width: 100%;
+}
+
+.learningdetail h2 {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.learningdetail p {
+    margin-left: 16px;
+}
+
+.learningdetail .courses {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.learningdetail .coursedesc {
+    margin-bottom: 24px;
+}
+
+.h-container.second {
+    padding-bottom: 32px;
+}
+
+.thesis video {
+    width: 100%;
+}
