@@ -13,6 +13,23 @@ h2 {
     font-weight: 700;
 }
 
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+        
+}
+
+
+a {
+    text-decoration: none;
+    color: #393333;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -26,6 +43,18 @@ header {
     height: 32px;
     margin: 0 24px;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 480px) {
+    header span {
+        display: none;
+    }    
+}
+
+@media screen and (min-width: 480px) {
+    header ul img {
+        display: none;
+    }
 }
 
 .logo .firstword {
@@ -49,15 +78,30 @@ header ul li {
     display: flex;
 }
 
+.banner .rightside {
+    justify-content: center;
+    margin-left: 24px;   /* only for desktop  */
+}
+
+@media screen and (max-width: 480px) {
+    .banner.container {
+        flex-direction: column;
+    }
+    .banner .rightside {
+        margin-left: 16px;    /* override for mobile */
+    }
+}
+
 .column {
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
     margin-bottom: 32px;
 }
 
-.banner .rightside {
-    justify-content: center;
+@media screen and (min-width: 480px) {
+    .column {
+        margin-top: 32px;
+    }
 }
 
 .banner h2 {
@@ -65,27 +109,56 @@ header ul li {
 }
 
 .banner .button {
-    width: 19rem;
     text-align: center;
     font-size: 1.1rem;
     padding: 8px 0;
     color: white;
-    background-color: #393333;
+}
+@media screen and (min-width: 480px) {  /* for desktop */
+    .banner .button {
+        max-width: 19rem;
+        background-color: #393333;  
+    }
+}
+@media screen and (max-width: 480px) { /* for mobile */
+    .banner .button {
+        max-width: 100%;   
+        background-color: #9b8f8f;
+    }
 }
 
-.gray {
-    background-color: lightgray;
+@media screen and (min-width: 480px) {  
+    .gray {
+        background-color: lightgray;
+    }
 }
 
-.column.leftside {
+.column.leftside {     /* only for desktop */
     width: 60%;
-    min-height: 400px;
     margin-left: 24px;
-    margin-right: 24px;
 }
 
-.column.rightside {
+@media screen and (max-width: 480px) {
+    .column.leftside {  /* override for mobile */
+        width: 100%;
+        margin-left: 0;  
+    }
+}
+
+.column.rightside {  /* only for desktop */
     width: 40%;
+    }
+
+@media screen and (max-width: 480px) {   /* override for mobile */
+    .column.rightside {
+    box-sizing: border-box;
+    width: 90%;
+    margin-right: 16px;   /* does not work - don't understand why..... */
+    /* border: 1px solid red; */
+    }
+    .information .leftside {
+        display: none;
+    }
 }
 
 .column.leftside img {
@@ -110,7 +183,18 @@ header ul li {
 
 .infodetail {
     display: flex;
-    align-items: center;
+}
+
+@media screen and (min-width: 480px) {
+    .infodetail {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .infodetail .infotext {
+        margin-left: 16px;
+    }
 }
 
 .infodetail img {
@@ -122,35 +206,75 @@ header ul li {
     margin-top: 0;
 }
 
-.infodetail p {
-    margin-top: 8px;
-}
+@media screen and (max-width: 480px) {
+    .infodetail {
+        flex-direction: column;
+        /* max-height: 100px; */
+    }
+    .infodetail img {
+        width: 100%;
+    }
+} 
+
+/* LEARNING section */
 
 .learning h1, .thesis h1 {
     text-align: center;
     padding: 32px 0;
 }
 
-.h-container {
+.learning-container {
     display: flex;
     justify-content: center;
     margin: 0 56px 32px 56px;
 }
 
-.learningdetail {
-    width: 33%;
-    background-color: white;
-    margin-left: 16px;
-    margin-right: 16px;
+@media screen and (max-width: 480px) {
+    .learningdetail {
+        width: 100%;
+        /* margin: 0 16px 8px 16px; */
+        margin-bottom: 8px;
+    }
+    .learningdetail img, .learningdetail p {
+        display: none;
+    }
+    .learning-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 16px;
+    }
+    .learningdetail h2 {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 16px 0 24px 16px;
+        background-color: #dbd9d9;
+    }
+    .second.learning-container {
+        padding-bottom: 24px;
+    }    
+}
+
+@media screen and (min-width: 480px) {
+    .learningdetail {
+        width: 33%;
+        background-color: white;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .second.learning-container {
+        padding-bottom: 32px;
+    }    
 }
 
 .learningdetail img {
     width: 100%;
 }
 
-.learningdetail h2 {
-    margin-top: 16px;
-    margin-left: 16px;
+@media screen and (min-width: 480px) {
+    .learningdetail h2 {
+        margin-top: 16px;
+        margin-left: 16px;
+    }
 }
 
 .learningdetail p {
@@ -166,10 +290,60 @@ header ul li {
     margin-bottom: 24px;
 }
 
-.h-container.second {
-    padding-bottom: 32px;
+/* THESIS section */
+
+@media screen and (max-width: 480px) {
+    .thesis h2, .thesis p, .thesis .rightside {
+        display: none;
+    }
+}
+
+.thesis p {
+    margin-top: 8px;
 }
 
 .thesis video {
     width: 100%;
+    margin-bottom: 24px;
 }
+
+.thesis .column.leftside {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+@media screen and (max-width: 480px) {
+    .thesis .column.leftside {
+    margin-bottom: 24px;
+    }
+}
+
+/* FOOTER section */
+
+@media screen and (max-width: 480px) {
+    footer .Terms {
+        display: none;
+    }
+}
+
+footer span {
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 480px) {
+    footer {
+        border-top: 1px solid gray;
+    }
+}
+
+footer {
+    display: flex;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 24px;
+}
+
+footer .copyright {
+    flex-grow: 1;
+}
+
