@@ -181,8 +181,9 @@ header ul li {
     margin: 32px 0 24px 0;
 }
 
-.information p {
-    line-height: 1.3rem;
+/* .information p, .thesis p { */
+p {
+    line-height: 1.4rem;
     font-size: 90%;
 }
 
