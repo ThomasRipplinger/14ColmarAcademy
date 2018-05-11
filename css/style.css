@@ -1,6 +1,6 @@
 body {
     font-family: 'Assistant', sans-serif;
-    color: #393333;
+    color: #5a5454;
 }
 
 h1 {
@@ -23,7 +23,6 @@ h2 {
     }
         
 }
-
 
 a {
     text-decoration: none;
@@ -74,6 +73,8 @@ header ul li {
     margin-left: 16px;
 }
 
+/* banner and info section */
+
 .container {
     display: flex;
 }
@@ -81,6 +82,10 @@ header ul li {
 .banner .rightside {
     justify-content: center;
     margin-left: 24px;   /* only for desktop  */
+}
+
+.banner.container {
+    background-color: lightgray;
 }
 
 @media screen and (max-width: 480px) {
@@ -114,6 +119,7 @@ header ul li {
     padding: 8px 0;
     color: white;
 }
+
 @media screen and (min-width: 480px) {  /* for desktop */
     .banner .button {
         max-width: 19rem;
@@ -147,14 +153,16 @@ header ul li {
 
 .column.rightside {  /* only for desktop */
     width: 40%;
+    margin-left: 24px;
     }
 
 @media screen and (max-width: 480px) {   /* override for mobile */
     .column.rightside {
     box-sizing: border-box;
     width: 90%;
+    margin-top: 16px;
+    margin-left: 16px;
     margin-right: 16px;   /* does not work - don't understand why..... */
-    /* border: 1px solid red; */
     }
     .information .leftside {
         display: none;
@@ -175,52 +183,63 @@ header ul li {
 
 .information p {
     line-height: 1.3rem;
+    font-size: 90%;
 }
 
 .information .author {
     font-size: 0.8rem;
 }
 
-.infodetail {
-    display: flex;
+.information a {
+    color: blue;
+}
+.infodetail .topmost {
+    margin-top: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {  /* mobile */
+    .desktop {
+        display: none;
+    }
+    .infodetail {
+        flex-direction: column;
+    }
+    .infodetail img {
+        width: 100%;
+        margin: 16px 0;
+    }
+} 
+
+@media screen and (min-width: 480px) { /* desktop */
+    .mobile {
+        display: none;
+    }
     .infodetail {
         align-items: center;
     }
-}
-
-@media screen and (max-width: 480px) {
+    .infodetail img {
+        width: 35%;
+        margin: 16px;
+    }
     .infodetail .infotext {
         margin-left: 16px;
     }
 }
 
-.infodetail img {
-    width: 35%;
-    margin: 16px;
+    /* LEARNING section */
+
+@media screen and (min-width: 480px) { /* desktop */
+    .learning h1, .thesis h1 {
+        text-align: center;
+        padding: 32px 0;
+    }
 }
 
-.infodetail.topmost img {
-    margin-top: 0;
-}
-
-@media screen and (max-width: 480px) {
-    .infodetail {
-        flex-direction: column;
-        /* max-height: 100px; */
+@media screen and (max-width: 480px) { /* mobile */
+    .learning h1, .thesis h1 {
+        text-align: center;
+        padding: 32px 0 16px 0;
     }
-    .infodetail img {
-        width: 100%;
-    }
-} 
-
-/* LEARNING section */
-
-.learning h1, .thesis h1 {
-    text-align: center;
-    padding: 32px 0;
 }
 
 .learning-container {
@@ -229,14 +248,26 @@ header ul li {
     margin: 0 56px 32px 56px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {  /* desktop */
+    .learningdetail {
+        width: 33%;
+        background-color: white;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .second.learning-container {
+        padding-bottom: 32px;
+    }    
+}
+
+@media screen and (max-width: 480px) {   /* mobile */
+    .learningdetail img, .learningdetail p {
+        display: none;
+    }
     .learningdetail {
         width: 100%;
         /* margin: 0 16px 8px 16px; */
         margin-bottom: 8px;
-    }
-    .learningdetail img, .learningdetail p {
-        display: none;
     }
     .learning-container {
         flex-direction: column;
@@ -251,18 +282,6 @@ header ul li {
     }
     .second.learning-container {
         padding-bottom: 24px;
-    }    
-}
-
-@media screen and (min-width: 480px) {
-    .learningdetail {
-        width: 33%;
-        background-color: white;
-        margin-left: 16px;
-        margin-right: 16px;
-    }
-    .second.learning-container {
-        padding-bottom: 32px;
     }    
 }
 
@@ -311,6 +330,7 @@ header ul li {
     margin-top: 32px;
     margin-bottom: 32px;
 }
+
 @media screen and (max-width: 480px) {
     .thesis .column.leftside {
     margin-bottom: 24px;
@@ -332,7 +352,7 @@ footer span {
 
 @media screen and (min-width: 480px) {
     footer {
-        border-top: 1px solid gray;
+        border-top: 1px solid rgb(170, 166, 166);
     }
 }
 
@@ -346,4 +366,3 @@ footer {
 footer .copyright {
     flex-grow: 1;
 }
-
