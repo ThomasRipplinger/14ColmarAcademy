@@ -79,14 +79,14 @@ header ul li {
     display: flex;
 }
 
-.banner .rightside {
-    justify-content: center;
-    margin-left: 24px;   /* only for desktop  */
-}
-
 .banner.container {
     background-color: lightgray;
 }
+
+.banner .rightside {
+    justify-content: center;
+    margin-left: 24px;   /* only for desktop  */
+}    
 
 @media screen and (max-width: 480px) {
     .banner.container {
@@ -191,10 +191,16 @@ header ul li {
 }
 
 .information a {
+    margin-top: 8px;
     color: blue;
 }
+
 .infodetail .topmost {
     margin-top: 0;
+}
+
+.infotext h2 {
+    margin-bottom: 8px;
 }
 
 @media screen and (max-width: 480px) {  /* mobile */
@@ -221,23 +227,22 @@ header ul li {
         width: 35%;
         margin: 16px;
     }
-    .infodetail .infotext {
-        margin-left: 16px;
-    }
 }
 
     /* LEARNING section */
 
+.learning h1, .thesis h1 {
+    text-align: center;
+}
+        
 @media screen and (min-width: 480px) { /* desktop */
-    .learning h1, .thesis h1 {
-        text-align: center;
+    .learning h1 {
         padding: 32px 0;
     }
 }
 
 @media screen and (max-width: 480px) { /* mobile */
     .learning h1, .thesis h1 {
-        text-align: center;
         padding: 32px 0 16px 0;
     }
 }
@@ -266,7 +271,6 @@ header ul li {
     }
     .learningdetail {
         width: 100%;
-        /* margin: 0 16px 8px 16px; */
         margin-bottom: 8px;
     }
     .learning-container {
@@ -293,11 +297,13 @@ header ul li {
     .learningdetail h2 {
         margin-top: 16px;
         margin-left: 16px;
+        margin-right: 16px;
     }
 }
 
 .learningdetail p {
     margin-left: 16px;
+    margin-right: 16px;
 }
 
 .learningdetail .courses {
@@ -327,7 +333,6 @@ header ul li {
 }
 
 .thesis .column.leftside {
-    margin-top: 32px;
     margin-bottom: 32px;
 }
 
