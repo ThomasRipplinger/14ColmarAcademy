@@ -35,7 +35,7 @@ header {
     height: 64px;
 }
 
-.logo {
+#logo {
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -56,11 +56,11 @@ header {
     }
 }
 
-.logo .firstword {
+#logo .firstword {
     font-weight: bold;
 }
 
-.logo .secondword {
+#logo .secondword {
     color: gray;
 }
 
@@ -79,20 +79,20 @@ header ul li {
     display: flex;
 }
 
-.banner.container {
+#banner.container {
     background-color: lightgray;
 }
 
-.banner .rightside {
+#banner .rightside {
     justify-content: center;
     margin-left: 24px;   /* only for desktop  */
 }    
 
 @media screen and (max-width: 480px) {
-    .banner.container {
+    #banner.container {
         flex-direction: column;
     }
-    .banner .rightside {
+    #banner .rightside {
         margin-left: 16px;    /* override for mobile */
     }
 }
@@ -109,11 +109,15 @@ header ul li {
     }
 }
 
-.banner h2 {
+#banner h2 {
     line-height: 150%;
 }
 
-.banner .button {
+#banner .secondline {
+    margin-bottom: 2rem;
+}
+
+#banner .button {
     text-align: center;
     font-size: 1.1rem;
     padding: 8px 0;
@@ -121,13 +125,13 @@ header ul li {
 }
 
 @media screen and (min-width: 480px) {  /* for desktop */
-    .banner .button {
+    #banner .button {
         max-width: 19rem;
         background-color: #393333;  
     }
 }
 @media screen and (max-width: 480px) { /* for mobile */
-    .banner .button {
+    #banner .button {
         max-width: 100%;   
         background-color: #9b8f8f;
     }
@@ -164,7 +168,7 @@ header ul li {
     margin-left: 16px;
     margin-right: 16px;   /* does not work - don't understand why..... */
     }
-    .information .leftside {
+    #information .leftside {
         display: none;
     }
 }
@@ -173,25 +177,26 @@ header ul li {
     width: 100%;
 }
 
-.information .rightside {
+#information .rightside {
     justify-content: space-between;
 }
 
-.information h1 {
+#information h1 {
     margin: 32px 0 24px 0;
 }
 
-/* .information p, .thesis p { */
+/* #information p, #thesis p { */
 p {
     line-height: 1.4rem;
     font-size: 90%;
 }
 
-.information .author {
+#information .author {
     font-size: 0.8rem;
+    margin-top: 2rem;
 }
 
-.information a {
+#information a {
     margin-top: 8px;
     color: blue;
 }
@@ -232,18 +237,18 @@ p {
 
     /* LEARNING section */
 
-.learning h1, .thesis h1 {
+#learning h1, #thesis h1 {
     text-align: center;
 }
         
 @media screen and (min-width: 480px) { /* desktop */
-    .learning h1 {
+    #learning h1 {
         padding: 32px 0;
     }
 }
 
 @media screen and (max-width: 480px) { /* mobile */
-    .learning h1, .thesis h1 {
+    #learning h1, #thesis h1 {
         padding: 32px 0 16px 0;
     }
 }
@@ -319,26 +324,26 @@ p {
 /* THESIS section */
 
 @media screen and (max-width: 480px) {
-    .thesis h2, .thesis p, .thesis .rightside {
+    #thesis h2, #thesis p, #thesis .rightside {
         display: none;
     }
 }
 
-.thesis p {
+#thesis p {
     margin-top: 8px;
 }
 
-.thesis video {
+#thesis video {
     width: 100%;
     margin-bottom: 24px;
 }
 
-.thesis .column.leftside {
+#thesis .column.leftside {
     margin-bottom: 32px;
 }
 
 @media screen and (max-width: 480px) {
-    .thesis .column.leftside {
+    #thesis .column.leftside {
     margin-bottom: 24px;
     }
 }
@@ -346,7 +351,7 @@ p {
 /* FOOTER section */
 
 @media screen and (max-width: 480px) {
-    footer .Terms {
+    footer .terms {
         display: none;
     }
 }
